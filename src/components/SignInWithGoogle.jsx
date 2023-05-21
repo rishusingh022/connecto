@@ -4,11 +4,10 @@ import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import "firebase/compat/database";
 import "firebase/compat/storage";
-import { db, storage } from "../firebase";
+import { db} from "../firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import GoogleLogo from "../img/googleLogo.png";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import GoogleLogo from "../assets/googleLogo.png";
 const firebaseConfig = {
   apiKey: "AIzaSyAqs68jHQCvQs9TJj93InLrDjXvcOKusQw",
   authDomain: "chat-e488a.firebaseapp.com",

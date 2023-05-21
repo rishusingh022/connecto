@@ -1,17 +1,20 @@
+import "./style.scss";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import "./style.scss";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import ErrorPage from "./pages/Error";
+import NotFoundPage from "./pages/NotFound";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HOME_ROUTE, LOGIN_ROUTE, REGISTER_ROUTE, ERROR_ROUTE, NOT_FOUND_ROUTE } from "./constant/routes";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
 
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
-      return <Navigate to="/login" />;
+      return <Navigate to={LOGIN_ROUTE} />;
     }
 
     return children
@@ -20,7 +23,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/">
+        <Route path={HOME_ROUTE}>
           <Route
             index
             element={
@@ -29,8 +32,10 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
+          <Route path={LOGIN_ROUTE} element={<Login />} />
+          <Route path={REGISTER_ROUTE} element={<Register />} />
+          <Route path={ERROR_ROUTE} element={<ErrorPage />} />
+          <Route path={NOT_FOUND_ROUTE} element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

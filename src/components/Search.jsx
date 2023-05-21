@@ -12,7 +12,11 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase";
 import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import { ERROR_ROUTE } from "../constant/routes";
+
 const Search = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [user, setUser] = useState(null);
   const [err, setErr] = useState(false);
@@ -30,8 +34,15 @@ const Search = () => {
       querySnapshot.forEach((doc) => {
         setUser(doc.data());
       });
-    } catch (err) {
+    } catch (e) {
       setErr(true);
+      const errorStatus = e.response?.status;
+      if (errorStatus) {
+        navigate(`${ERROR_ROUTE}/${errorStatus}`);
+      } else {
+        navigate(ERROR_ROUTE);
+      }
+      return null;
     }
   };
 
@@ -71,10 +82,18 @@ const Search = () => {
           [combinedId + ".date"]: serverTimestamp(),
         });
       }
-    } catch (err) {}
+    } catch (e) {
+      const errorStatus = e.response?.status;
+      if (errorStatus) {
+        navigate(`${ERROR_ROUTE}/${errorStatus}`);
+      } else {
+        navigate(ERROR_ROUTE);
+      }
+      return null;
+    }
 
     setUser(null);
-    setUsername("")
+    setUsername("");
   };
   return (
     <div className="search">
