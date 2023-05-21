@@ -383,3 +383,28 @@
       }
     }
   }
+
+  .errorContainer {
+    background-image: linear-gradient(rgb(164, 43, 191), rgb(109,43,238));
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+  }
+  
+  .errorText {
+    margin: 10px;
+  }
+  
+  .pageNotFoundContainer {
+    background-image: linear-gradient(rgb(164, 43, 191), rgb(109,43,238));
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 100;
+  }
