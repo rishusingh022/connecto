@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Real-Time Chat Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a real-time chat application built with React.js for the frontend and Firebase for the backend. Users can engage in real-time chatting, search for people to chat with, register and log in using both regular credentials and Google authentication. Users can also add a profile image during the registration process.
 
-## Available Scripts
+## Screenshots
 
-In the project directory, you can run:
+### Login Page
+![Login Page](https://github.com/rishusingh022/real-time-chat-app/assets/60195863/a76f682a-fac2-4523-a36c-2a43aaf85506)
 
-### `npm start`
+### Register Page
+![Register Page](https://github.com/rishusingh022/real-time-chat-app/assets/60195863/1ca717e0-b001-4707-bfce-c4cb02c5a1e0)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Home Screen with Chat History
+![Home Screen 1](https://github.com/rishusingh022/real-time-chat-app/assets/60195863/6acfd0de-3454-4c7c-a134-4a7d225fb040)
+![Home Screen 2](https://github.com/rishusingh022/real-time-chat-app/assets/60195863/7530d4f6-51f5-46f9-8afd-06a10fad277a)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Searching for People to Chat With
+![Search](https://github.com/rishusingh022/real-time-chat-app/assets/60195863/5a8195d4-5e0f-4f31-a1f5-e6c10ede669c)
 
-### `npm test`
+### Google Authentication
+![Google Auth](https://github.com/rishusingh022/real-time-chat-app/assets/60195863/ca875369-2ef9-48ff-a7d2-55c9f041f662)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Run
 
-### `npm run build`
+1. Clone this repository.
+2. Navigate to the project directory.
+3. Install dependencies using the command `npm install`.
+4. Start the development server with `npm start`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
