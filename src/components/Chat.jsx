@@ -5,15 +5,16 @@ import More from "../assets/more.png";
 import Messages from "./Messages";
 import Input from "./Input";
 import { ChatContext } from "../context/ChatContext";
+import fetchFirstName from '../utils/common/extractFirstName';
 
 const Chat = () => {
-  const { data } = useContext(ChatContext);
+  const { data } =  useContext(ChatContext);
 
   return (
     <div className="chat">
       <div className="chatInfo">
         <img src={data.user?.photoURL} alt="" />
-        <span>{data.user?.displayName}</span>
+        <span>{fetchFirstName(data.user?.displayName)}</span>
         <div className="chatIcons">
           <img src={Cam} alt="" />
           <img src={Add} alt="" />

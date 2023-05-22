@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
 import { db } from "../firebase";
+import fetchFirstName from '../utils/common/extractFirstName';
 
 const Chats = () => {
   const [chats, setChats] = useState([]);
@@ -38,7 +39,7 @@ const Chats = () => {
         >
           <img src={chat[1].userInfo.photoURL} alt="" />
           <div className="userChatInfo">
-            <div className="userChatInfo-name">{chat[1].userInfo.displayName}</div>
+            <div className="userChatInfo-name">{fetchFirstName(chat[1].userInfo.displayName)}</div>
             <div className="userChatInfo-last-message">{chat[1].lastMessage?.text}</div>
           </div>
         </div>
