@@ -25,17 +25,22 @@ function SignInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
     await auth.signInWithPopup(provider);
     const user = auth.currentUser;
-    //create user on firestore
-    await setDoc(doc(db, "users", user.uid), {
-      uid: user.uid,
-      displayName: user.displayName,
-      email: user.email,
-      photoURL: user.photoURL,
-    });
+    try{
+      //create user on firestore
+      await setDoc(doc(db, "users", user.uid), {
+        uid: user.uid,
+        displayName: user.displayName,
+        email: user.email,
+        photoURL: user.photoURL,
+      });
 
-    //create empty user chats on firestore
-    await setDoc(doc(db, "userChats", user.uid), {});
-    navigate("/");
+      //create empty user chats on firestore
+      await setDoc(doc(db, "userChats", user.uid), {});
+      navigate("/");
+    }
+    catch(err){
+      console.log(err);
+    }
   };
   return (
     <>
